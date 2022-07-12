@@ -198,7 +198,7 @@ namespace LibraryMIS
 			if (dataGrid1.CurrentRowIndex>=0&&dataGrid1.DataSource!=null&&dataGrid1[dataGrid1.CurrentCell]!=null)
 			{
 				oleConnection1.Open();
-				string sql="select * from person where identity='"+ds.Tables["identity"].Rows[dataGrid1.CurrentCell.RowNumber][0].ToString().Trim()+"'";
+				string sql= "select * from person where identityname='" + ds.Tables["identity"].Rows[dataGrid1.CurrentCell.RowNumber][0].ToString().Trim()+"'";
 				SqlCommand cmd = new SqlCommand(sql,oleConnection1);
 				
                 SqlDataReader dr;
@@ -211,7 +211,7 @@ namespace LibraryMIS
 				else
 				{
 					dr.Close();
-					sql = "delete * from identityinfo where identity not in(select distinct identity from person) and identity=  "+
+					sql = "delete * from identityinfo where identityname not in(select distinct identityname from person) and identityname=  " +
 						"'"+ds.Tables["identity"].Rows[dataGrid1.CurrentCell.RowNumber][0].ToString().Trim()+"'";
 					cmd.CommandText = sql;
 					cmd.ExecuteNonQuery();
