@@ -16,10 +16,16 @@ namespace Model
         [StringLength(50)]
         public string MCode { get; set; }
 
+        public string MCodeRe { get; set; }
+
         public bool manage { get; set; }
 
         public bool work { get; set; }
 
         public bool query { get; set; }
+
+        public bool RadioManage { get; set; }
+
+        public bool RadioWork { get; set; }
     }
 }
