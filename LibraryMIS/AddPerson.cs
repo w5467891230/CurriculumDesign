@@ -363,7 +363,6 @@ namespace LibraryMIS
 				MessageBox.Show("请填写完整信息","提示");
 			else
 			{
-				oleConnection1.Open();
 				string sql="select * from person where PID='"+textID.Text.Trim()+"' or PN='"+textPN.Text.Trim()+"'";
 				SqlCommand cmd = new SqlCommand(sql,oleConnection1);
 				if (null!=cmd.ExecuteScalar())
