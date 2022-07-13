@@ -70,5 +70,17 @@ namespace BLL
             }
             return result;
         }
+        public string DeleteUserMethod(int q)
+        {
+            string result = userDAL.DeleteUserMethod(q);
+            if ( result== null)
+            {
+                return result = "删除失败";
+            }
+            else
+            {
+                return result;
+            }
+        }
     }
 }

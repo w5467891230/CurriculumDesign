@@ -156,15 +156,6 @@ namespace LibraryMIS
 		DataSet ds;
 		private void User_Load(object sender, System.EventArgs e)
 		{
-            /*oleConnection1.Open();
-			string sql = "select MName as 用户名,MCode as 密码,manage as 权限1,work as 权限2,query as 权限3 from manager";
-			SqlDataAdapter adp = new SqlDataAdapter(sql,oleConnection1);
-			ds = new DataSet();
-			ds.Clear();
-			adp.Fill(ds,"user");
-			dataGrid1.DataSource = ds.Tables["user"].DefaultView;
-			dataGrid1.CaptionText = "共有"+ds.Tables["user"].Rows.Count+"条记录";
-			oleConnection1.Close();*/
             BLL.UserBLL userBLL = new BLL.UserBLL();
             dataGrid1.DataSource = userBLL.QueryAll1();
             dataGrid1.CaptionText = "共有" + userBLL.QueryAll2() + "条记录";
@@ -185,18 +176,26 @@ namespace LibraryMIS
 
 		private void btDel_Click(object sender, System.EventArgs e)
 		{
-			/*if (dataGrid1.CurrentRowIndex>=0&&dataGrid1.DataSource!=null&&dataGrid1[dataGrid1.CurrentCell]!=null)
+            var i = dataGrid1.CurrentCell.RowNumber;
+            BLL.UserBLL userBLL=new BLL.UserBLL();
+            string result = userBLL.DeleteUserMethod(i);
+
+            if (dataGrid1.CurrentRowIndex>=0&&dataGrid1.DataSource!=null&&dataGrid1[dataGrid1.CurrentCell]!=null)
 			{
-				oleConnection1.Open();
-				string sql="delete * from manager where MName = '"+ds.Tables["user"].Rows[dataGrid1.CurrentCell.RowNumber][0].ToString().Trim()+"'";
-				SqlCommand cmd = new SqlCommand(sql,oleConnection1);
-				cmd.ExecuteNonQuery();
-				MessageBox.Show("删除用户'"+ds.Tables[0].Rows[dataGrid1.CurrentCell.RowNumber][0].ToString().Trim()+"'成功","提示");
+                if (result == null)
+                {
+                    MessageBox.Show(result, "提示");
+                }
+                else
+                {
+                    MessageBox.Show("删除用户'" + result + "'成功", "提示");
+                }
 				
-				oleConnection1.Close();
+				
+				
 			} 
 			else
-				return;*/
+				return;
 		}
 
 		private void btClose_Click(object sender, System.EventArgs e)
