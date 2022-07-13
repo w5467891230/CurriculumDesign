@@ -55,7 +55,6 @@
     <Compile Include="bookOut.cs" />
     <Compile Include="BookType.cs" />
     <Compile Include="Borrow.cs" />
-    <Compile Include="database\dbConnection.cs" />
     <Compile Include="identityinfo.cs" />
     <Compile Include="manager.cs" />
     <Compile Include="Model.cs" />

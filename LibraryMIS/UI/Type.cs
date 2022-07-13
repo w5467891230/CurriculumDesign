@@ -9,23 +9,23 @@ using System.Data.SqlClient;
 namespace LibraryMIS
 {
 	/// <summary>
-	/// Identity 的摘要说明。
+	/// Type 的摘要说明。
 	/// </summary>
-	public class Identity : System.Windows.Forms.Form
+	public class Type : System.Windows.Forms.Form
 	{
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Button btAdd;
 		private System.Windows.Forms.Button btClose;
 		private System.Windows.Forms.Button btDel;
 		private System.Windows.Forms.Button btModify;
 		private System.Windows.Forms.DataGrid dataGrid1;
+		private System.Windows.Forms.Button btAdd;
 		/// <summary>
 		/// 必需的设计器变量。
 		/// </summary>
 		private System.ComponentModel.Container components = null;
+		private System.Windows.Forms.Label label1;
 		private SqlConnection oleConnection1 = null;
 
-		public Identity()
+		public Type()
 		{
 			//
 			// Windows 窗体设计器支持所必需的
@@ -60,43 +60,23 @@ namespace LibraryMIS
 		/// </summary>
 		private void InitializeComponent()
 		{
-            this.label1 = new System.Windows.Forms.Label();
-            this.btAdd = new System.Windows.Forms.Button();
             this.btClose = new System.Windows.Forms.Button();
             this.btDel = new System.Windows.Forms.Button();
             this.btModify = new System.Windows.Forms.Button();
             this.dataGrid1 = new System.Windows.Forms.DataGrid();
+            this.btAdd = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(207, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 31);
-            this.label1.TabIndex = 32;
-            this.label1.Text = "身 份 信 息";
-            // 
-            // btAdd
-            // 
-            this.btAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btAdd.ForeColor = System.Drawing.Color.Black;
-            this.btAdd.Location = new System.Drawing.Point(633, 77);
-            this.btAdd.Name = "btAdd";
-            this.btAdd.Size = new System.Drawing.Size(100, 30);
-            this.btAdd.TabIndex = 31;
-            this.btAdd.Text = "添加";
-            this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
             // 
             // btClose
             // 
             this.btClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btClose.ForeColor = System.Drawing.Color.Black;
-            this.btClose.Location = new System.Drawing.Point(633, 324);
+            this.btClose.Location = new System.Drawing.Point(472, 256);
             this.btClose.Name = "btClose";
-            this.btClose.Size = new System.Drawing.Size(100, 30);
-            this.btClose.TabIndex = 30;
+            this.btClose.Size = new System.Drawing.Size(75, 23);
+            this.btClose.TabIndex = 18;
             this.btClose.Text = "退出";
             this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
@@ -104,10 +84,10 @@ namespace LibraryMIS
             // 
             this.btDel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btDel.ForeColor = System.Drawing.Color.Black;
-            this.btDel.Location = new System.Drawing.Point(633, 242);
+            this.btDel.Location = new System.Drawing.Point(472, 192);
             this.btDel.Name = "btDel";
-            this.btDel.Size = new System.Drawing.Size(100, 29);
-            this.btDel.TabIndex = 29;
+            this.btDel.Size = new System.Drawing.Size(75, 23);
+            this.btDel.TabIndex = 17;
             this.btDel.Text = "删除";
             this.btDel.Click += new System.EventHandler(this.btDel_Click);
             // 
@@ -115,10 +95,10 @@ namespace LibraryMIS
             // 
             this.btModify.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btModify.ForeColor = System.Drawing.Color.Black;
-            this.btModify.Location = new System.Drawing.Point(633, 159);
+            this.btModify.Location = new System.Drawing.Point(472, 128);
             this.btModify.Name = "btModify";
-            this.btModify.Size = new System.Drawing.Size(100, 30);
-            this.btModify.TabIndex = 28;
+            this.btModify.Size = new System.Drawing.Size(75, 23);
+            this.btModify.TabIndex = 16;
             this.btModify.Text = "修改";
             this.btModify.Click += new System.EventHandler(this.btModify_Click);
             // 
@@ -137,30 +117,50 @@ namespace LibraryMIS
             this.dataGrid1.HeaderBackColor = System.Drawing.Color.Silver;
             this.dataGrid1.HeaderForeColor = System.Drawing.Color.Black;
             this.dataGrid1.LinkColor = System.Drawing.Color.Navy;
-            this.dataGrid1.Location = new System.Drawing.Point(15, 57);
+            this.dataGrid1.Location = new System.Drawing.Point(8, 48);
             this.dataGrid1.Name = "dataGrid1";
             this.dataGrid1.ParentRowsBackColor = System.Drawing.Color.White;
             this.dataGrid1.ParentRowsForeColor = System.Drawing.Color.Black;
             this.dataGrid1.ReadOnly = true;
             this.dataGrid1.SelectionBackColor = System.Drawing.Color.Navy;
             this.dataGrid1.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGrid1.Size = new System.Drawing.Size(597, 316);
-            this.dataGrid1.TabIndex = 27;
+            this.dataGrid1.Size = new System.Drawing.Size(448, 246);
+            this.dataGrid1.TabIndex = 15;
             // 
-            // Identity
+            // btAdd
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(8, 18);
+            this.btAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btAdd.ForeColor = System.Drawing.Color.Black;
+            this.btAdd.Location = new System.Drawing.Point(472, 64);
+            this.btAdd.Name = "btAdd";
+            this.btAdd.Size = new System.Drawing.Size(75, 23);
+            this.btAdd.TabIndex = 19;
+            this.btAdd.Text = "添加";
+            this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(152, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(120, 24);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "图 书 类 型";
+            // 
+            // Type
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
             this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(776, 442);
+            this.ClientSize = new System.Drawing.Size(560, 302);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btAdd);
             this.Controls.Add(this.btClose);
             this.Controls.Add(this.btDel);
             this.Controls.Add(this.btModify);
             this.Controls.Add(this.dataGrid1);
-            this.Name = "Identity";
-            this.Text = "身份";
-            this.Load += new System.EventHandler(this.Identity_Load);
+            this.Name = "Type";
+            this.Text = "图书类型";
+            this.Load += new System.EventHandler(this.Type_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).EndInit();
             this.ResumeLayout(false);
 
@@ -168,68 +168,71 @@ namespace LibraryMIS
 		#endregion
 
 		DataSet ds;
-		private void Identity_Load(object sender, System.EventArgs e)
+		private void Type_Load(object sender, System.EventArgs e)
 		{
 			oleConnection1.Open();
-			string sql = "select identityname as '身份',longTime as '最长借阅时间',bigNum as '最大借阅数量' from identityinfo";
+			string sql = "select type as 类型,tRemark as 类型描述,TID as 类型编号 from type";
 			SqlDataAdapter adp = new SqlDataAdapter(sql,oleConnection1);
 			ds = new DataSet();
 			ds.Clear();
-			adp.Fill(ds,"identity");
-			dataGrid1.DataSource = ds.Tables["identity"].DefaultView;
-			dataGrid1.CaptionText = "共有"+ds.Tables["identity"].Rows.Count+"条记录";
+			adp.Fill(ds,"type");
+			dataGrid1.DataSource = ds.Tables["type"].DefaultView;
+			dataGrid1.CaptionText = "共有"+ds.Tables["type"].Rows.Count+"条记录";
 			oleConnection1.Close();
 		}
 
-		AddIdentity addIdentity;
+		AddType addType;
 		private void btAdd_Click(object sender, System.EventArgs e)
 		{
-			addIdentity = new AddIdentity();
-			addIdentity.ShowDialog();
+			addType = new AddType();
+			addType.ShowDialog();
 		}
 
+		ModifyType modifyType;
 		private void btModify_Click(object sender, System.EventArgs e)
 		{
-		
+			if (dataGrid1.DataSource != null || dataGrid1[dataGrid1.CurrentCell] != null)
+			{
+				modifyType = new ModifyType();
+				modifyType.textName.Text=ds.Tables["type"].Rows[dataGrid1.CurrentCell.RowNumber][0].ToString().Trim();
+				modifyType.textRemark.Text=ds.Tables["type"].Rows[dataGrid1.CurrentCell.RowNumber][1].ToString().Trim();
+				modifyType.Tag=ds.Tables["type"].Rows[dataGrid1.CurrentCell.RowNumber][2].ToString().Trim();
+				modifyType.Show();
+			}
+			else
+				MessageBox.Show("没有指定类型信息！","提示");
 		}
 
-		private void btDel_Click(object sender, System.EventArgs e)//删除
+		private void btDel_Click(object sender, System.EventArgs e)
 		{
-            Model.identityinfo identityinfo = new Model.identityinfo();
-            identityinfo.identityname = ds.Tables["identity"].Rows[dataGrid1.CurrentCell.RowNumber][0].ToString().Trim();
-            
-            DeldientyBLL deldientyBLL = new DeldientyBLL();
-            if (return =="OK")
-            {
-                oleConnection1.Open();
-             
-                string sql = "select * from person where identity='" + identityinfo.identityname + "'";
-                SqlCommand cmd = new SqlCommand(sql, oleConnection1);
-
-                SqlDataReader dr;
-                dr = cmd.ExecuteReader();
-                if (dr.Read())
-                {
-                    MessageBox.Show("删除身份'" + identityinfo.identityname + "'失败，有该身份的读者存在！", "提示");
-                    dr.Close();
-                }
-                else
-                {
-                    dr.Close();
-                    sql = "delete from identityinfo where identity not in(select distinct identity from person) and identity=  " +
-                        "'" + identityinfo.identityname + "'";
-                    cmd.CommandText = sql;
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("删除身份'" + ds.Tables[0].Rows[dataGrid1.CurrentCell.RowNumber][0].ToString().Trim() + "'成功", "提示");
-                }
-                oleConnection1.Close();
-            }
-
-            else
-                return;
+			if (dataGrid1.CurrentRowIndex>=0&&dataGrid1.DataSource!=null&&dataGrid1[dataGrid1.CurrentCell]!=null)
+			{
+				oleConnection1.Open();
+				string sql="select * from book where type='"+ds.Tables["type"].Rows[dataGrid1.CurrentCell.RowNumber][0].ToString().Trim()+"'";
+				SqlCommand cmd = new SqlCommand(sql,oleConnection1);
+				SqlDataReader dr;
+				dr = cmd.ExecuteReader();
+				if (dr.Read())
+				{
+					MessageBox.Show("删除类型'"+ds.Tables["type"].Rows[dataGrid1.CurrentCell.RowNumber][0].ToString().Trim()+"'失败，请先删掉该类型图书！","提示");
+					dr.Close();
+				} 
+				else
+				{
+					dr.Close();
+					sql = "delete * from type where type not in(select distinct type from book) and TID "+
+						"= "+ds.Tables["type"].Rows[dataGrid1.CurrentCell.RowNumber][2].ToString().Trim()+"";
+					cmd.CommandText = sql;
+					cmd.ExecuteNonQuery();
+					MessageBox.Show("删除类型'"+ds.Tables[0].Rows[dataGrid1.CurrentCell.RowNumber][0].ToString().Trim()+"'成功","提示");
+				}
+				oleConnection1.Close();
+			} 
+			else
+				return;
 		}
 
-        private void btClose_Click(object sender, System.EventArgs e)
+		private void btClose_Click(object sender, System.EventArgs e)
 		{
 			this.Close();
 		}

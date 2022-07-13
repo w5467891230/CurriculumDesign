@@ -151,7 +151,7 @@ namespace LibraryMIS
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(8, 18);
             this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(776, 442);
+            this.ClientSize = new System.Drawing.Size(777, 440);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btAdd);
             this.Controls.Add(this.btClose);
@@ -193,43 +193,37 @@ namespace LibraryMIS
 		
 		}
 
-		private void btDel_Click(object sender, System.EventArgs e)//删除
+		private void btDel_Click(object sender, System.EventArgs e)
 		{
-            Model.identityinfo identityinfo = new Model.identityinfo();
-            identityinfo.identityname = ds.Tables["identity"].Rows[dataGrid1.CurrentCell.RowNumber][0].ToString().Trim();
-            
-            DeldientyBLL deldientyBLL = new DeldientyBLL();
-            if (return =="OK")
-            {
-                oleConnection1.Open();
-             
-                string sql = "select * from person where identity='" + identityinfo.identityname + "'";
-                SqlCommand cmd = new SqlCommand(sql, oleConnection1);
-
+			if (dataGrid1.CurrentRowIndex>=0&&dataGrid1.DataSource!=null&&dataGrid1[dataGrid1.CurrentCell]!=null)
+			{
+				oleConnection1.Open();
+				string sql="select * from person where identity='"+ds.Tables["identity"].Rows[dataGrid1.CurrentCell.RowNumber][0].ToString().Trim()+"'";
+				SqlCommand cmd = new SqlCommand(sql,oleConnection1);
+				
                 SqlDataReader dr;
-                dr = cmd.ExecuteReader();
-                if (dr.Read())
-                {
-                    MessageBox.Show("删除身份'" + identityinfo.identityname + "'失败，有该身份的读者存在！", "提示");
-                    dr.Close();
-                }
-                else
-                {
-                    dr.Close();
-                    sql = "delete from identityinfo where identity not in(select distinct identity from person) and identity=  " +
-                        "'" + identityinfo.identityname + "'";
-                    cmd.CommandText = sql;
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("删除身份'" + ds.Tables[0].Rows[dataGrid1.CurrentCell.RowNumber][0].ToString().Trim() + "'成功", "提示");
-                }
-                oleConnection1.Close();
-            }
-
-            else
-                return;
+				dr = cmd.ExecuteReader();
+				if (dr.Read())
+				{
+					MessageBox.Show("删除身份'"+ds.Tables["identity"].Rows[dataGrid1.CurrentCell.RowNumber][0].ToString().Trim()+"'失败，有该身份的读者存在！","提示");
+					dr.Close();
+				} 
+				else
+				{
+					dr.Close();
+					sql = "delete * from identityinfo where identity not in(select distinct identity from person) and identity=  "+
+						"'"+ds.Tables["identity"].Rows[dataGrid1.CurrentCell.RowNumber][0].ToString().Trim()+"'";
+					cmd.CommandText = sql;
+					cmd.ExecuteNonQuery();
+					MessageBox.Show("删除身份'"+ds.Tables[0].Rows[dataGrid1.CurrentCell.RowNumber][0].ToString().Trim()+"'成功","提示");
+				}
+				oleConnection1.Close();
+			} 
+			else
+				return;
 		}
 
-        private void btClose_Click(object sender, System.EventArgs e)
+		private void btClose_Click(object sender, System.EventArgs e)
 		{
 			this.Close();
 		}

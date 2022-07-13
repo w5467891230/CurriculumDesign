@@ -227,27 +227,36 @@ namespace LibraryMIS
 			if (textId.Text.Trim()==""||comboNum.Text.Trim()==""||comboDate.Text.Trim()=="")
 				MessageBox.Show("请填写完整信息","提示");
 			else
-			{
-				oleConnection1.Open();
-				string sql="select * from identityinfo where identity='"+textId.Text.Trim()+"'";
-				SqlCommand cmd = new SqlCommand(sql,oleConnection1);
-				if (null!=cmd.ExecuteScalar())
-					MessageBox.Show("身份重复","提示");
-				else
-				{
-					sql="insert into identityinfo values ('"+textId.Text.Trim()+"',"+comboDate.Text.Trim()+","+comboNum.Text.Trim()+")";
-					cmd.CommandText = sql;
-					cmd.ExecuteNonQuery();
-					MessageBox.Show("添加成功","提示");
-					textId.Text="";
-					comboDate.Text="";
-					comboNum.Text="";
-				}
-				oleConnection1.Close();
-			}
-		}
+            {
+                string text = textId.Text.Trim();
+                string date = comboDate.Text.Trim();
+                string num = comboNum.Text.Trim();
+                NewMethod(text, date, num);
+            }
+        }
 
-		private void btClose_Click(object sender, System.EventArgs e)
+        private void NewMethod(string text, string date, string num)
+        {
+            oleConnection1.Open();
+
+            string sql = "select * from identityinfo where identity='" + text + "'";
+            SqlCommand cmd = new SqlCommand(sql, oleConnection1);
+            if (null != cmd.ExecuteScalar())
+                MessageBox.Show("身份重复", "提示");
+            else
+            {
+                sql = "insert into identityinfo values ('" + text + "'," + date + "," + num + ")";
+                cmd.CommandText = sql;
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("添加成功", "提示");
+                textId.Text = "";
+                comboDate.Text = "";
+                comboNum.Text = "";
+            }
+            oleConnection1.Close();
+        }
+
+        private void btClose_Click(object sender, System.EventArgs e)
 		{
 			this.Close();
 		}
