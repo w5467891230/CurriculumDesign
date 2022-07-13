@@ -60,7 +60,7 @@ namespace DAL
             ds = new DataSet();
             ds.Clear();
             adp.Fill(ds, "user");
-            manager.cc= ds.Tables["user"].DefaultView;
+            manager.cc = ds.Tables["user"].DefaultView;
             manager.count = ds.Tables["user"].Rows.Count;
             oleConnection1.Close();
             return manager.cc;
@@ -77,6 +77,40 @@ namespace DAL
             manager.count = ds.Tables["user"].Rows.Count;
             oleConnection1.Close();
             return manager.count;
+        }
+        public string QueryAll3(int i)
+        {
+            oleConnection1.Open();
+            string sql = "select MName as 用户名,MCode as 密码,manage as 权限1,work as 权限2,query as 权限3 from manager";
+            SqlDataAdapter adp = new SqlDataAdapter(sql, oleConnection1);
+            ds = new DataSet();
+            ds.Clear();
+            adp.Fill(ds, "user");
+            string q = ds.Tables[0].Rows[i][0].ToString().Trim();
+            oleConnection1.Close();
+            return q;
+        }
+        public bool ModifyUserMethod(Model.manager manager)
+        {
+            try
+            {
+                oleConnection1.Open();
+                string sql;
+                if (manager.RadioManage == true)
+                    sql = "update manager set manage=1,work=0,query=0 where MName='" + manager.MName + "'";
+                else
+                    sql = "update manager set manage=0,work=1,query=0 where MName='" + manager.MName + "'";
+
+                SqlCommand cmd = new SqlCommand(sql, oleConnection1);
+                cmd.ExecuteNonQuery();
+                oleConnection1.Close();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
         }
     }
 }
