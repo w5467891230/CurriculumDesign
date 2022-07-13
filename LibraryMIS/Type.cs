@@ -205,32 +205,53 @@ namespace LibraryMIS
 		}
 
 		private void btDel_Click(object sender, System.EventArgs e)
-		{
-			if (dataGrid1.CurrentRowIndex>=0&&dataGrid1.DataSource!=null&&dataGrid1[dataGrid1.CurrentCell]!=null)
+		{  
+			Model.Type type1=new Model.Type();	
+			type1.Type1= ds.Tables["type"].Rows[dataGrid1.CurrentCell.RowNumber][0].ToString().Trim();
+            type1.TRemark= ds.Tables["type"].Rows[dataGrid1.CurrentCell.RowNumber][2].ToString().Trim();
+			type1.TID = ds.Tables[0].Rows[dataGrid1.CurrentCell.RowNumber][0].ToString().Trim();
+			var i = dataGrid1.CurrentRowIndex;
+			var h = dataGrid1.DataSource;
+			var k = dataGrid1[dataGrid1.CurrentCell];
+			BLL.DeltypeBLL deltype = new BLL.DeltypeBLL();
+
+			string result = deltype.deltype2(type1,i,h,k);
+			if (result == "OK")
+			{
+				MessageBox.Show("删除成功", "提示");
+			}
+			else
+			{
+				MessageBox.Show(result, "提示");
+			}
+			/*if (dataGrid1.CurrentRowIndex>=0&&dataGrid1.DataSource!=null&&dataGrid1[dataGrid1.CurrentCell]!=null)
 			{
 				oleConnection1.Open();
-				string sql="select * from book where type='"+ds.Tables["type"].Rows[dataGrid1.CurrentCell.RowNumber][0].ToString().Trim()+"'";
+              
+                string sql="select * from book where type='"+ type1.Type1 + "'";
 				SqlCommand cmd = new SqlCommand(sql,oleConnection1);
 				SqlDataReader dr;
 				dr = cmd.ExecuteReader();
 				if (dr.Read())
 				{
-					MessageBox.Show("删除类型'"+ds.Tables["type"].Rows[dataGrid1.CurrentCell.RowNumber][0].ToString().Trim()+"'失败，请先删掉该类型图书！","提示");
+                    MessageBox.Show("删除类型'"+ type1.Type1 + "'失败，请先删掉该类型图书！","提示");
 					dr.Close();
 				} 
 				else
 				{
 					dr.Close();
-					sql = "delete from type where type not in(select distinct type from book) and TID "+
-						"= "+ds.Tables["type"].Rows[dataGrid1.CurrentCell.RowNumber][2].ToString().Trim()+"";
+                  
+                    sql = "delete from type where type not in(select distinct type from book) and TID "+
+						"= "+ type1.TRemark + "";
 					cmd.CommandText = sql;
 					cmd.ExecuteNonQuery();
-					MessageBox.Show("删除类型'"+ds.Tables[0].Rows[dataGrid1.CurrentCell.RowNumber][0].ToString().Trim()+"'成功","提示");
+                   
+                    MessageBox.Show("删除类型'"+ type1.TID + "'成功","提示");
 				}
 				oleConnection1.Close();
-			} 
+			}
 			else
-				return;
+				return; */
 		}
 
 		private void btClose_Click(object sender, System.EventArgs e)

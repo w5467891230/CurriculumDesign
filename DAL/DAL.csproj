@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="AddtypeDAL.cs" />
     <Compile Include="database\dbConnection.cs" />
+    <Compile Include="DeltypeDAL.cs" />
     <Compile Include="ModifiyDAL.cs" />
     <Compile Include="UserDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
