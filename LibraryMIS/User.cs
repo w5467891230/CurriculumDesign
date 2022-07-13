@@ -156,15 +156,9 @@ namespace LibraryMIS
 		DataSet ds;
 		private void User_Load(object sender, System.EventArgs e)
 		{
-			oleConnection1.Open();
-			string sql = "select MName as 用户名,MCode as 密码,manage as 权限1,work as 权限2,query as 权限3 from manager";
-			SqlDataAdapter adp = new SqlDataAdapter(sql,oleConnection1);
-			ds = new DataSet();
-			ds.Clear();
-			adp.Fill(ds,"user");
-			dataGrid1.DataSource = ds.Tables["user"].DefaultView;
-			dataGrid1.CaptionText = "共有"+ds.Tables["user"].Rows.Count+"条记录";
-			oleConnection1.Close();
+			BLL.UserBLL userBLL=new BLL.UserBLL();
+			dataGrid1.DataSource = userBLL.QueryAll1();
+			dataGrid1.CaptionText = "共有" + userBLL.QueryAll2() + "条记录";
 		}
 
 		ModifyUser modifyUser;

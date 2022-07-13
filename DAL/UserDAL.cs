@@ -11,6 +11,7 @@ namespace DAL
 {
     public class UserDAL
     {
+        DataSet ds;
         private SqlConnection oleConnection1 = new SqlConnection(LibraryMIS.database.dbConnection.connection);
         public bool AddUserMethod(Model.manager userModel)
         {
@@ -49,6 +50,33 @@ namespace DAL
             }
             oleConnection1.Close();
             return false;
+        }
+        public object QueryAll1()
+        {
+            Model.manager manager = new Model.manager();
+            oleConnection1.Open();
+            string sql = "select MName as 用户名,MCode as 密码,manage as 权限1,work as 权限2,query as 权限3 from manager";
+            SqlDataAdapter adp = new SqlDataAdapter(sql, oleConnection1);
+            ds = new DataSet();
+            ds.Clear();
+            adp.Fill(ds, "user");
+            manager.cc= ds.Tables["user"].DefaultView;
+            manager.count = ds.Tables["user"].Rows.Count;
+            oleConnection1.Close();
+            return manager.cc;
+        }
+        public int QueryAll2()
+        {
+            Model.manager manager = new Model.manager();
+            oleConnection1.Open();
+            string sql = "select MName as 用户名,MCode as 密码,manage as 权限1,work as 权限2,query as 权限3 from manager";
+            SqlDataAdapter adp = new SqlDataAdapter(sql, oleConnection1);
+            ds = new DataSet();
+            ds.Clear();
+            adp.Fill(ds, "user");
+            manager.count = ds.Tables["user"].Rows.Count;
+            oleConnection1.Close();
+            return manager.count;
         }
     }
 }

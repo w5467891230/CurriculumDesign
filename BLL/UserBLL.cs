@@ -44,5 +44,13 @@ namespace BLL
             }
             return result;
         }
+        public object QueryAll1()
+        {
+           return userDAL.QueryAll1();
+        }
+        public int QueryAll2()
+        {
+            return userDAL.QueryAll2();
+        }
     }
 }
