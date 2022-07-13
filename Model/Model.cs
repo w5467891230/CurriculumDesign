@@ -24,7 +24,7 @@ namespace Model
         public virtual DbSet<ReaderInfo> ReaderInfoes { get; set; }
         public virtual DbSet<ReaderType> ReaderTypes { get; set; }
         public virtual DbSet<Return> Returns { get; set; }
-        public virtual DbSet<type> types { get; set; }
+        public virtual DbSet<Type> types { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

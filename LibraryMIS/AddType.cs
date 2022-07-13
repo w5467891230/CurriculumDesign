@@ -4,6 +4,7 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Model;
 
 namespace LibraryMIS
 {
@@ -166,18 +167,33 @@ namespace LibraryMIS
 
 		private void btAdd_Click(object sender, System.EventArgs e)
 		{
-			if (textName.Text.Trim()==""||textRemark.Text.Trim()=="")
+			Model.Type type1 = new Model.Type();
+			type1.TID= textName.Text.Trim();
+             type1.TRemark = textRemark.Text.Trim();
+			BLL.AddTypeBLL addtype = new BLL.AddTypeBLL();
+
+			string result = addtype.addtype2(type1);
+			if (result == "OK")
+			{
+				MessageBox.Show("添加成功", "提示");
+			}
+			else
+			{
+				MessageBox.Show(result, "提示");
+			}
+			/*
+            if (type1.TNAME == "" || type1.TRemark == "")
 				MessageBox.Show("请填写完整信息","提示");
 			else
 			{
 				oleConnection1.Open();
-				string sql = "select * from type where type='"+textName.Text.Trim()+"'";
+				string sql = "select * from type where type='"+ type1.TNAME + "'";
 				SqlCommand cmd = new SqlCommand(sql,oleConnection1);
 				if (null!=cmd.ExecuteScalar())
 					MessageBox.Show("类型重复，请重新输入！","提示");
 				else
 				{
-					sql="insert into type (type,tRemark) values ('"+textName.Text.Trim()+"','"+textRemark.Text.Trim()+"')";
+					sql="insert into type (type,tRemark) values ('"+ type1.TNAME + "','" + type1.TRemark + "')";
 					cmd.CommandText = sql;
 					cmd.ExecuteNonQuery();
 					MessageBox.Show("类型添加成功！","提示");
@@ -185,7 +201,7 @@ namespace LibraryMIS
 					textRemark.Clear();
 				}
 				oleConnection1.Close();
-			}
+			}*/
 		}
 
 		private void btClose_Click(object sender, System.EventArgs e)

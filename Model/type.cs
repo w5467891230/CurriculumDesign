@@ -7,16 +7,18 @@ namespace Model
     using System.Data.Entity.Spatial;
 
     [Table("type")]
-    public partial class type
+    public partial class Type
     {
         [Key]
-        public int TID { get; set; }
+        public string TID { get; set; }
 
         [Column("type")]
         [StringLength(50)]
-        public string type1 { get; set; }
+        public string Type1 { get; set; }
 
         [StringLength(50)]
-        public string tRemark { get; set; }
+        public string TRemark { get; set; }
+
+        
     }
 }
