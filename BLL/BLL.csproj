@@ -45,6 +45,7 @@
     <Compile Include="DeltypeBLL.cs" />
     <Compile Include="ModifyTypeBLL.cs" />
     <Compile Include="PersonBLL.cs" />
+    <Compile Include="ldientyBLL.cs" />
     <Compile Include="UserBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

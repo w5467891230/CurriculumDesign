@@ -156,9 +156,9 @@ namespace LibraryMIS
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.dataGrid2);
-            this.groupBox1.Location = new System.Drawing.Point(8, 8);
+            this.groupBox1.Location = new System.Drawing.Point(11, 10);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(184, 224);
+            this.groupBox1.Size = new System.Drawing.Size(245, 288);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "借阅者信息";
@@ -166,102 +166,102 @@ namespace LibraryMIS
             // textMoney
             // 
             this.textMoney.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textMoney.Location = new System.Drawing.Point(72, 192);
+            this.textMoney.Location = new System.Drawing.Point(96, 247);
             this.textMoney.Name = "textMoney";
             this.textMoney.ReadOnly = true;
-            this.textMoney.Size = new System.Drawing.Size(100, 21);
+            this.textMoney.Size = new System.Drawing.Size(133, 25);
             this.textMoney.TabIndex = 11;
             // 
             // textIden
             // 
             this.textIden.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textIden.Location = new System.Drawing.Point(72, 160);
+            this.textIden.Location = new System.Drawing.Point(96, 206);
             this.textIden.Name = "textIden";
             this.textIden.ReadOnly = true;
-            this.textIden.Size = new System.Drawing.Size(100, 21);
+            this.textIden.Size = new System.Drawing.Size(133, 25);
             this.textIden.TabIndex = 10;
             // 
             // textPN
             // 
             this.textPN.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textPN.Location = new System.Drawing.Point(72, 128);
+            this.textPN.Location = new System.Drawing.Point(96, 165);
             this.textPN.Name = "textPN";
             this.textPN.ReadOnly = true;
-            this.textPN.Size = new System.Drawing.Size(100, 21);
+            this.textPN.Size = new System.Drawing.Size(133, 25);
             this.textPN.TabIndex = 9;
             // 
             // textPSex
             // 
             this.textPSex.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textPSex.Location = new System.Drawing.Point(72, 96);
+            this.textPSex.Location = new System.Drawing.Point(96, 123);
             this.textPSex.Name = "textPSex";
             this.textPSex.ReadOnly = true;
-            this.textPSex.Size = new System.Drawing.Size(100, 21);
+            this.textPSex.Size = new System.Drawing.Size(133, 25);
             this.textPSex.TabIndex = 8;
             // 
             // textPName
             // 
             this.textPName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textPName.Location = new System.Drawing.Point(72, 64);
+            this.textPName.Location = new System.Drawing.Point(96, 82);
             this.textPName.Name = "textPName";
             this.textPName.ReadOnly = true;
-            this.textPName.Size = new System.Drawing.Size(100, 21);
+            this.textPName.Size = new System.Drawing.Size(133, 25);
             this.textPName.TabIndex = 7;
             // 
             // textPID
             // 
             this.textPID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textPID.Location = new System.Drawing.Point(72, 32);
+            this.textPID.Location = new System.Drawing.Point(96, 41);
             this.textPID.Name = "textPID";
-            this.textPID.Size = new System.Drawing.Size(100, 21);
+            this.textPID.Size = new System.Drawing.Size(133, 25);
             this.textPID.TabIndex = 6;
             this.textPID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textPID_KeyDown);
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(16, 192);
+            this.label5.Location = new System.Drawing.Point(21, 247);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 16);
+            this.label5.Size = new System.Drawing.Size(75, 20);
             this.label5.TabIndex = 5;
             this.label5.Text = "罚  款";
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(16, 160);
+            this.label6.Location = new System.Drawing.Point(21, 206);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 16);
+            this.label6.Size = new System.Drawing.Size(75, 20);
             this.label6.TabIndex = 4;
             this.label6.Text = "身  份";
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(16, 128);
+            this.label3.Location = new System.Drawing.Point(21, 165);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 16);
+            this.label3.Size = new System.Drawing.Size(75, 20);
             this.label3.TabIndex = 3;
             this.label3.Text = "身份证";
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(16, 96);
+            this.label4.Location = new System.Drawing.Point(21, 123);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 16);
+            this.label4.Size = new System.Drawing.Size(75, 21);
             this.label4.TabIndex = 2;
             this.label4.Text = "性  别";
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(16, 64);
+            this.label2.Location = new System.Drawing.Point(21, 82);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 16);
+            this.label2.Size = new System.Drawing.Size(64, 21);
             this.label2.TabIndex = 1;
             this.label2.Text = "姓  名";
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(16, 32);
+            this.label1.Location = new System.Drawing.Point(21, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 16);
+            this.label1.Size = new System.Drawing.Size(75, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "借书证号";
             // 
@@ -282,14 +282,14 @@ namespace LibraryMIS
             this.dataGrid2.HeaderBackColor = System.Drawing.Color.Silver;
             this.dataGrid2.HeaderForeColor = System.Drawing.Color.Black;
             this.dataGrid2.LinkColor = System.Drawing.Color.Navy;
-            this.dataGrid2.Location = new System.Drawing.Point(144, 8);
+            this.dataGrid2.Location = new System.Drawing.Point(192, 10);
             this.dataGrid2.Name = "dataGrid2";
             this.dataGrid2.ParentRowsBackColor = System.Drawing.Color.White;
             this.dataGrid2.ParentRowsForeColor = System.Drawing.Color.Black;
             this.dataGrid2.ReadOnly = true;
             this.dataGrid2.SelectionBackColor = System.Drawing.Color.Navy;
             this.dataGrid2.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGrid2.Size = new System.Drawing.Size(40, 24);
+            this.dataGrid2.Size = new System.Drawing.Size(53, 31);
             this.dataGrid2.TabIndex = 24;
             this.dataGrid2.Visible = false;
             // 
@@ -303,9 +303,9 @@ namespace LibraryMIS
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.textBID);
             this.groupBox2.Controls.Add(this.dataGrid3);
-            this.groupBox2.Location = new System.Drawing.Point(200, 8);
+            this.groupBox2.Location = new System.Drawing.Point(267, 10);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(360, 224);
+            this.groupBox2.Size = new System.Drawing.Size(480, 288);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "借书";
@@ -313,18 +313,18 @@ namespace LibraryMIS
             // label15
             // 
             this.label15.ForeColor = System.Drawing.Color.Red;
-            this.label15.Location = new System.Drawing.Point(256, 24);
+            this.label15.Location = new System.Drawing.Point(341, 31);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(56, 16);
+            this.label15.Size = new System.Drawing.Size(75, 20);
             this.label15.TabIndex = 24;
             this.label15.Text = "请按回车";
             // 
             // btOut
             // 
             this.btOut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btOut.Location = new System.Drawing.Point(240, 184);
+            this.btOut.Location = new System.Drawing.Point(320, 237);
             this.btOut.Name = "btOut";
-            this.btOut.Size = new System.Drawing.Size(75, 23);
+            this.btOut.Size = new System.Drawing.Size(100, 29);
             this.btOut.TabIndex = 23;
             this.btOut.Text = "借出";
             this.btOut.Click += new System.EventHandler(this.btOut_Click);
@@ -332,16 +332,16 @@ namespace LibraryMIS
             // date1
             // 
             this.date1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.date1.Location = new System.Drawing.Point(80, 184);
+            this.date1.Location = new System.Drawing.Point(107, 237);
             this.date1.Name = "date1";
-            this.date1.Size = new System.Drawing.Size(112, 21);
+            this.date1.Size = new System.Drawing.Size(149, 25);
             this.date1.TabIndex = 22;
             // 
             // label14
             // 
-            this.label14.Location = new System.Drawing.Point(24, 184);
+            this.label14.Location = new System.Drawing.Point(32, 237);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(56, 16);
+            this.label14.Size = new System.Drawing.Size(75, 20);
             this.label14.TabIndex = 21;
             this.label14.Text = "借书日期";
             // 
@@ -359,128 +359,128 @@ namespace LibraryMIS
             this.groupBox4.Controls.Add(this.textWriter);
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Controls.Add(this.textBName);
-            this.groupBox4.Location = new System.Drawing.Point(8, 48);
+            this.groupBox4.Location = new System.Drawing.Point(11, 62);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(344, 120);
+            this.groupBox4.Size = new System.Drawing.Size(458, 154);
             this.groupBox4.TabIndex = 13;
             this.groupBox4.TabStop = false;
             // 
             // label13
             // 
-            this.label13.Location = new System.Drawing.Point(192, 88);
+            this.label13.Location = new System.Drawing.Point(256, 113);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(32, 16);
+            this.label13.Size = new System.Drawing.Size(43, 21);
             this.label13.TabIndex = 22;
             this.label13.Text = "价格";
             // 
             // textPrice
             // 
             this.textPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textPrice.Location = new System.Drawing.Point(232, 88);
+            this.textPrice.Location = new System.Drawing.Point(309, 113);
             this.textPrice.Name = "textPrice";
             this.textPrice.ReadOnly = true;
-            this.textPrice.Size = new System.Drawing.Size(100, 21);
+            this.textPrice.Size = new System.Drawing.Size(134, 25);
             this.textPrice.TabIndex = 23;
             // 
             // label12
             // 
-            this.label12.Location = new System.Drawing.Point(16, 88);
+            this.label12.Location = new System.Drawing.Point(21, 113);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(56, 16);
+            this.label12.Size = new System.Drawing.Size(75, 21);
             this.label12.TabIndex = 20;
             this.label12.Text = "出版日期";
             // 
             // textBDate
             // 
             this.textBDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBDate.Location = new System.Drawing.Point(72, 88);
+            this.textBDate.Location = new System.Drawing.Point(96, 113);
             this.textBDate.Name = "textBDate";
             this.textBDate.ReadOnly = true;
-            this.textBDate.Size = new System.Drawing.Size(100, 21);
+            this.textBDate.Size = new System.Drawing.Size(133, 25);
             this.textBDate.TabIndex = 21;
             // 
             // label11
             // 
-            this.label11.Location = new System.Drawing.Point(192, 56);
+            this.label11.Location = new System.Drawing.Point(256, 72);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(32, 16);
+            this.label11.Size = new System.Drawing.Size(43, 21);
             this.label11.TabIndex = 18;
             this.label11.Text = "类型";
             // 
             // textType
             // 
             this.textType.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textType.Location = new System.Drawing.Point(232, 56);
+            this.textType.Location = new System.Drawing.Point(309, 72);
             this.textType.Name = "textType";
             this.textType.ReadOnly = true;
-            this.textType.Size = new System.Drawing.Size(100, 21);
+            this.textType.Size = new System.Drawing.Size(134, 25);
             this.textType.TabIndex = 19;
             // 
             // label10
             // 
-            this.label10.Location = new System.Drawing.Point(16, 56);
+            this.label10.Location = new System.Drawing.Point(21, 72);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(56, 16);
+            this.label10.Size = new System.Drawing.Size(75, 21);
             this.label10.TabIndex = 16;
             this.label10.Text = "出版社";
             // 
             // textPublish
             // 
             this.textPublish.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textPublish.Location = new System.Drawing.Point(72, 56);
+            this.textPublish.Location = new System.Drawing.Point(96, 72);
             this.textPublish.Name = "textPublish";
             this.textPublish.ReadOnly = true;
-            this.textPublish.Size = new System.Drawing.Size(100, 21);
+            this.textPublish.Size = new System.Drawing.Size(133, 25);
             this.textPublish.TabIndex = 17;
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(192, 24);
+            this.label9.Location = new System.Drawing.Point(256, 31);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(32, 16);
+            this.label9.Size = new System.Drawing.Size(43, 20);
             this.label9.TabIndex = 14;
             this.label9.Text = "作者";
             // 
             // textWriter
             // 
             this.textWriter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textWriter.Location = new System.Drawing.Point(232, 24);
+            this.textWriter.Location = new System.Drawing.Point(309, 31);
             this.textWriter.Name = "textWriter";
             this.textWriter.ReadOnly = true;
-            this.textWriter.Size = new System.Drawing.Size(100, 21);
+            this.textWriter.Size = new System.Drawing.Size(134, 25);
             this.textWriter.TabIndex = 15;
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(16, 24);
+            this.label8.Location = new System.Drawing.Point(21, 31);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 16);
+            this.label8.Size = new System.Drawing.Size(64, 20);
             this.label8.TabIndex = 12;
             this.label8.Text = "图书名";
             // 
             // textBName
             // 
             this.textBName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBName.Location = new System.Drawing.Point(72, 24);
+            this.textBName.Location = new System.Drawing.Point(96, 31);
             this.textBName.Name = "textBName";
             this.textBName.ReadOnly = true;
-            this.textBName.Size = new System.Drawing.Size(100, 21);
+            this.textBName.Size = new System.Drawing.Size(133, 25);
             this.textBName.TabIndex = 13;
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(48, 24);
+            this.label7.Location = new System.Drawing.Point(64, 31);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 16);
+            this.label7.Size = new System.Drawing.Size(75, 20);
             this.label7.TabIndex = 12;
             this.label7.Text = "图书编号";
             // 
             // textBID
             // 
             this.textBID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBID.Location = new System.Drawing.Point(104, 24);
+            this.textBID.Location = new System.Drawing.Point(139, 31);
             this.textBID.Name = "textBID";
-            this.textBID.Size = new System.Drawing.Size(136, 21);
+            this.textBID.Size = new System.Drawing.Size(181, 25);
             this.textBID.TabIndex = 12;
             this.textBID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBID_KeyDown);
             // 
@@ -501,14 +501,14 @@ namespace LibraryMIS
             this.dataGrid3.HeaderBackColor = System.Drawing.Color.Silver;
             this.dataGrid3.HeaderForeColor = System.Drawing.Color.Black;
             this.dataGrid3.LinkColor = System.Drawing.Color.Navy;
-            this.dataGrid3.Location = new System.Drawing.Point(312, 8);
+            this.dataGrid3.Location = new System.Drawing.Point(416, 10);
             this.dataGrid3.Name = "dataGrid3";
             this.dataGrid3.ParentRowsBackColor = System.Drawing.Color.White;
             this.dataGrid3.ParentRowsForeColor = System.Drawing.Color.Black;
             this.dataGrid3.ReadOnly = true;
             this.dataGrid3.SelectionBackColor = System.Drawing.Color.Navy;
             this.dataGrid3.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGrid3.Size = new System.Drawing.Size(40, 24);
+            this.dataGrid3.Size = new System.Drawing.Size(53, 31);
             this.dataGrid3.TabIndex = 25;
             this.dataGrid3.Visible = false;
             // 
@@ -516,9 +516,9 @@ namespace LibraryMIS
             // 
             this.groupBox3.Controls.Add(this.dataGrid4);
             this.groupBox3.Controls.Add(this.dataGrid1);
-            this.groupBox3.Location = new System.Drawing.Point(8, 240);
+            this.groupBox3.Location = new System.Drawing.Point(11, 309);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(552, 112);
+            this.groupBox3.Size = new System.Drawing.Size(736, 144);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "已借图书";
@@ -540,14 +540,14 @@ namespace LibraryMIS
             this.dataGrid4.HeaderBackColor = System.Drawing.Color.Silver;
             this.dataGrid4.HeaderForeColor = System.Drawing.Color.Black;
             this.dataGrid4.LinkColor = System.Drawing.Color.Navy;
-            this.dataGrid4.Location = new System.Drawing.Point(272, 16);
+            this.dataGrid4.Location = new System.Drawing.Point(363, 21);
             this.dataGrid4.Name = "dataGrid4";
             this.dataGrid4.ParentRowsBackColor = System.Drawing.Color.White;
             this.dataGrid4.ParentRowsForeColor = System.Drawing.Color.Black;
             this.dataGrid4.ReadOnly = true;
             this.dataGrid4.SelectionBackColor = System.Drawing.Color.Navy;
             this.dataGrid4.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGrid4.Size = new System.Drawing.Size(160, 24);
+            this.dataGrid4.Size = new System.Drawing.Size(213, 30);
             this.dataGrid4.TabIndex = 24;
             this.dataGrid4.Visible = false;
             // 
@@ -566,21 +566,21 @@ namespace LibraryMIS
             this.dataGrid1.HeaderBackColor = System.Drawing.Color.Silver;
             this.dataGrid1.HeaderForeColor = System.Drawing.Color.Black;
             this.dataGrid1.LinkColor = System.Drawing.Color.Navy;
-            this.dataGrid1.Location = new System.Drawing.Point(8, 16);
+            this.dataGrid1.Location = new System.Drawing.Point(11, 21);
             this.dataGrid1.Name = "dataGrid1";
             this.dataGrid1.ParentRowsBackColor = System.Drawing.Color.White;
             this.dataGrid1.ParentRowsForeColor = System.Drawing.Color.Black;
             this.dataGrid1.ReadOnly = true;
             this.dataGrid1.SelectionBackColor = System.Drawing.Color.Navy;
             this.dataGrid1.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGrid1.Size = new System.Drawing.Size(536, 88);
+            this.dataGrid1.Size = new System.Drawing.Size(714, 113);
             this.dataGrid1.TabIndex = 23;
             // 
             // BookOut
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.AutoScaleBaseSize = new System.Drawing.Size(8, 18);
             this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(570, 367);
+            this.ClientSize = new System.Drawing.Size(929, 486);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
