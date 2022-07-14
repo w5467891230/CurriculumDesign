@@ -235,7 +235,7 @@ namespace LibraryMIS
             if (ID == "" || Num == "" || Date == "")
             {
                 string result = addIentyBLL.addIdentity(ID, Date,Num);
-                if (result == "删除成功")
+                if (result == "增加成功")
                 {
                     MessageBox.Show(result, "提示");
                 }
