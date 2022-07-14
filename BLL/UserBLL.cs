@@ -44,5 +44,43 @@ namespace BLL
             }
             return result;
         }
+        public object QueryAll1()
+        {
+           return userDAL.QueryAll1();
+        }
+        public int QueryAll2()
+        {
+            return userDAL.QueryAll2();
+        }
+        public string QueryAll3(int i)
+        {
+           return userDAL.QueryAll3(i);
+        }
+        public string ModifyUserMtehod(Model.manager manager)
+        {
+            string result = "修改成功";
+            if (manager.RadioManage == false && manager.RadioWork == false)
+                result = "请选择权限";
+            else
+            {
+                if (userDAL.ModifyUserMethod(manager) == false)
+                {
+                    result = "修改失败";
+                }
+            }
+            return result;
+        }
+        public string DeleteUserMethod(int q)
+        {
+            string result = userDAL.DeleteUserMethod(q);
+            if ( result== null)
+            {
+                return result = "删除失败";
+            }
+            else
+            {
+                return result;
+            }
+        }
     }
 }

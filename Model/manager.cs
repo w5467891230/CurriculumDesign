@@ -27,5 +27,7 @@ namespace Model
         public bool RadioManage { get; set; }
 
         public bool RadioWork { get; set; }
+        public object cc { get; set; }
+        public int count { get; set; }
     }
 }
