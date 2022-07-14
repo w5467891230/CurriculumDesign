@@ -28,7 +28,7 @@ namespace Model
         [StringLength(50)]
         public string PCode { get; set; }
 
-        public decimal? PMoney { get; set; }
+        public string PMoney { get; set; }
 
         [StringLength(50)]
         public string identityname { get; set; }
@@ -37,5 +37,12 @@ namespace Model
         public string PRemark { get; set; }
 
         public bool sys { get; set; }
+
+        public int PsRow { get; set; }
+        public object PsData { get; set; }
+        public object PsCurrent { get; set; }
+        public string PsXx { get; set; }
+        public int count { get; set; }
+        public int s { get; set; }
     }
 }

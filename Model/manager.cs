@@ -9,6 +9,8 @@ namespace Model
     [Table("manager")]
     public partial class manager
     {
+        
+
         [Key]
         [StringLength(50)]
         public string MName { get; set; }
