@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="database\dbConnection.cs" />
-    <Compile Include="DeldientyDAL.cs" />
+    <Compile Include="ldientyDAL.cs" />
     <Compile Include="UserDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

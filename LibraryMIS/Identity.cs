@@ -151,7 +151,7 @@ namespace LibraryMIS
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(8, 18);
             this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(776, 442);
+            this.ClientSize = new System.Drawing.Size(795, 461);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btAdd);
             this.Controls.Add(this.btClose);
@@ -198,10 +198,23 @@ namespace LibraryMIS
             Model.identityinfo identityinfo = new Model.identityinfo();
             identityinfo.identityname = ds.Tables["identity"].Rows[dataGrid1.CurrentCell.RowNumber][0].ToString().Trim();
             
-            DeldientyBLL deldientyBLL = new DeldientyBLL();
-            if (return =="OK")
+            ldientyBLL deldientyBLL = new ldientyBLL();
+
+            var i = dataGrid1.CurrentRowIndex;
+            var a = dataGrid1.DataSource;
+            var b = dataGrid1[dataGrid1.CurrentCell];
+            if (i >= 0 && a != null && b != null)
             {
-                oleConnection1.Open();
+                string result = deldientyBLL.delIdentity(identityinfo);
+                if(result == "删除成功")
+                {
+                    MessageBox.Show(result, "提示");
+                }
+                else
+                {
+                    MessageBox.Show(result, "提示");
+                }
+                /*oleConnection1.Open();
              
                 string sql = "select * from person where identity='" + identityinfo.identityname + "'";
                 SqlCommand cmd = new SqlCommand(sql, oleConnection1);
@@ -220,13 +233,12 @@ namespace LibraryMIS
                         "'" + identityinfo.identityname + "'";
                     cmd.CommandText = sql;
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("删除身份'" + ds.Tables[0].Rows[dataGrid1.CurrentCell.RowNumber][0].ToString().Trim() + "'成功", "提示");
+                    MessageBox.Show("删除身份'" + identityinfo.identityname + "'成功", "提示");
                 }
-                oleConnection1.Close();
+                oleConnection1.Close();*/
             }
-
             else
-                return;
+                return; 
 		}
 
         private void btClose_Click(object sender, System.EventArgs e)
